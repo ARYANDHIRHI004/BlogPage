@@ -123,7 +123,7 @@ export class Service{
 
     getFilePreview(fileId){
         try {
-            this.bucket.getFilePreview(
+           return this.bucket.getFilePreview(
                 config.appwriteBucketId,
                 fileId
             )

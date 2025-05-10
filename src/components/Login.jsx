@@ -14,6 +14,7 @@ const Login = () => {
   const [error, setError] = useState("");
 
   const login = async (data) => {
+    console.log(data)
     setError("");
     try {
       const session = await authService.login(data);
@@ -64,7 +65,9 @@ const Login = () => {
                     /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                     "Email address must be a valid address",
                 },
-              })}
+                
+              },
+            )}
             />
             <Input
               label="Password: "
@@ -74,6 +77,7 @@ const Login = () => {
                 required: true,
               })}
             />
+            
             <Button type="submit" className="w-full">
               Sign in
             </Button>

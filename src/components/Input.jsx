@@ -11,7 +11,7 @@ const Input = React.forwardRef(function Input({
   return (
     <div className='w-full'>
         {label && <label>{label}</label>}
-        <input type={type} ref={ref} />
+        <input type={type} ref={ref} {...props} />
     </div>
   )
 })
